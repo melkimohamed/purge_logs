@@ -1,0 +1,14 @@
+---
+- block:
+  - name: Find log files in folder {{ item.name }}
+    find:
+      path: "{{ item.name }}"
+      age: "{{ item.date }}"
+      file_type: file
+    register: files_to_delete
+  - name: Remove log files {{ item.name }} older than {{ item.date }}
+    no_log: True
+    file:
+      path: "{{ item.path }}"
+      state: absent
+    with_items: "{{ files_to_delete.files }}"

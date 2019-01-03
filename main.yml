@@ -1,0 +1,15 @@
+---
+- hosts: hdp
+  sudo: yes
+  gather_facts: false
+  tasks:
+  - name: Purge logs
+    include_role:
+      name: clear
+    with_items:
+      - { name: '/var/log/anaconda', date: '1d' }
+      - { name: '/var/log/audit', date: '1h' }
+      - { name: '/var/log/secure', date: '1h' }
+      - { name: '/var/log/mariadb', date: '1d' }
+      - { name: '/var/log/httpd', date: '0h' }
+
