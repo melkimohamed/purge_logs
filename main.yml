@@ -7,9 +7,34 @@
     include_role:
       name: clear
     with_items:
-      - { name: '/var/log/anaconda', date: '1d' }
-      - { name: '/var/log/audit', date: '1h' }
-      - { name: '/var/log/secure', date: '1h' }
-      - { name: '/var/log/mariadb', date: '1d' }
-      - { name: '/var/log/httpd', date: '0h' }
+      - { name: '/var/log/ambari-server', date: '30d' }
+      - { name: '/var/log/ambari-agent', date: '30h' }
+      - { name: '/var/log/ambari-infra-solr-client', date: '30d' }
+      - { name: '/var/log/ambari-metrics-collector', date: '30d' }
+      - { name: '/var/log/ambari-infra-solr', date: '30d' }
+      - { name: '/var/log/ambari-logsearch-logfeeder', date: '30d' }
+      - { name: '/var/log/spark', date: '30d' }
+      - { name: '/var/log/spark2', date: '30d' }
+      - { name: '/var/log/hive', date: '2d' }
+      - { name: '/var/log/hive2', date: '30d' }
+      - { name: '/var/log/hive-hcatalog', date: '30d' }
+      - { name: '/var/log/webhcat', date: '30d' }
+      - { name: '/var/log/hadoop', date: '30d' }
+      - { name: '/var/log/hadoop/hdfs/audit/db/spool', date: '1d' }
+      - { name: '/var/log/hadoop-yarn', date: '30d' }
+      - { name: '/var/log/hadoop-mapreduce', date: '30d' }
+      - { name: '/var/log/hadoop-hdfs', date: '30d' }
+      - { name: '/var/log/zeppelin', date: '30d' }
+      - { name: '/var/log/oozie', date: '1d' }
+      - { name: '/var/log/atlas', date: '30d' }
+      - { name: '/var/log/zookeeper', date: '30d' }
+      - { name: '/var/log/ranger', date: '30d' }
+      - { name: '/var/log/hst', date: '30d' }
+      - { name: '/var/log/hbase', date: '30d' }
+      - { name: '/var/log/kafka', date: '30d' }
+      - { name: '/var/log/sqoop', date: '30d' }
+      - { name: '/var/log/falcon', date: '30d' }
+      - { name: '/var/log/nifi', date: '30d' }
+      - { name: '/var/log/storm ', date: '30d' }
+      - { name: '/var/log/knox  ', date: '30d' }
 
