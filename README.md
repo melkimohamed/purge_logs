@@ -2,11 +2,10 @@
 
 #### Features
 
-  - Remove logs in a specific folder
-  - Remove logs older than a specific date
+  - Delete old log files in a specific  folder
 
 #### Requirements
-To use this role you should add a specifc folders logs in main.yml with a specific date, example to remove logs /var/log/hive only the file old than 30 days, and logs /var/log/knox only the file old than 10 days use this syntax:
+To use this role you should add a specifc folders logs in main.yml with a specific date, example to delete log files in  /var/log/hive only   files old than 30 days, and logs /var/log/knox only  files old than 10 days use this syntax:
 ```sh
 - { name: '/var/log/hive', date: '30d' }
 - { name: '/var/log/knox', date: '10d' } 
